@@ -20,6 +20,7 @@ const MapMarker = (props) => {
         handleSetSelectedPlant(props.data);
       }}
       label={props.data.States}
+      clusterer={props.clusterer}
     >
       {/* if the marker is clicked, saved the selected plant to the store */}
       {selectedPlant.Plant_name === props.data.Plant_name && (

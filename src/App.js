@@ -4,11 +4,7 @@ import Routes from "./layouts/routes";
 function App() {
   return (
     <div>
-      <Routes>
-        <>
-          <div>test</div>
-        </>
-      </Routes>
+      <Routes />
     </div>
   );
 }

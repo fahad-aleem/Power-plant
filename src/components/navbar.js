@@ -1,38 +1,39 @@
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
+import styled from "@emotion/styled";
 
-const useStyles = makeStyles((them) => ({
-  root: {
-    display: "flex !important",
-    justifyContent: "space-between !important",
-  },
-  link: {
-    color: "#fff",
-    padding: "1rem",
-    textDecoration: "none",
-    fontSize: "1rem",
-  },
-}));
+const Nav = styled.nav`
+  padding: 1rem 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: #252422;
+  color: #fff;
+  align-items: center;
+`;
+
+const NavBrand = styled.a`
+  display: block;
+  font-size: 1.5rem;
+`;
+
+const LinkTo = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  margin-right: 2rem;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 const Navbar = () => {
-  const classes = useStyles();
   return (
-    <AppBar position="relative" color="primary">
-      <Toolbar className={classes.root}>
-        <Typography variant="h6">Power Generation</Typography>
-        <div>
-          <Link className={classes.link} to="/">
-            Home
-          </Link>
-          <Link className={classes.link} to="/user">
-            User
-          </Link>
-        </div>
-      </Toolbar>
-    </AppBar>
+    <Nav>
+      <NavBrand>Power Generation</NavBrand>
+      <div>
+        <LinkTo to="/">Home</LinkTo>
+        <LinkTo to="/user">User</LinkTo>
+      </div>
+    </Nav>
   );
 };
 

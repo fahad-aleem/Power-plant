@@ -3,7 +3,7 @@ import Home from "../views/Home";
 import User from "../views/User";
 import Navbar from "../components/navbar";
 
-const Layouts = ({ children }) => {
+const Layouts = () => {
   return (
     <div>
       <Navbar />

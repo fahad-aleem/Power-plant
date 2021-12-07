@@ -1,16 +1,18 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
-// import Navbar from "../components/navbar";
-import Box from "@mui/material/Box";
+import styled from "@emotion/styled";
+const Box = styled.div`
+  padding: 1rem;
+`;
+const H1 = styled.h1`
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 600;
+`;
 const User = () => {
   return (
-    <div>
-      <Box my={2}>
-        <Typography variant="h3" align="center" color="initial">
-          User page
-        </Typography>
-      </Box>
-    </div>
+    <Box my={2}>
+      <H1>User Page</H1>
+    </Box>
   );
 };
 
